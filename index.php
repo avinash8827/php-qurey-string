@@ -11,17 +11,17 @@
         if (isset($_GET['name'])) {
            // echo 'yes';
             echo $_GET['name'];
-            echo $_GET['surname'];
-            echo $_GET['contact'];
-            echo $_GET['addr'];
+            echo $_GET['frisurname'];
+            echo $_GET['fricontact'];
+            echo $_GET['friaddr'];
             $name = $_GET['name'];
-            $surename = $_GET['surname'];
-            $contact = $_GET['contact'];
-            $addr = $_GET['addr'];
+            $frisurename = $_GET['frisurname'];
+            $fricontact = $_GET['fricontact'];
+            $friaddr = $_GET['friaddr'];
 
           $conn = mysqli_connect('localhost','root','','mydatabase_db')
 
-          $sql = "INSERT INTO friends(  friend_name,surname,contact,addr)VALUES('name','$surename','$contact','$addr')";
+          $sql = "INSERT INTO friends(  friend_name,surname,contact,addr)VALUES('$name','$surename','$contact','$addr')";
 
 
           mysqli_query($conn,$sql);
